@@ -1,7 +1,8 @@
 function App() {
+
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="container grid grid-cols-[repeat(4,_minmax(3rem,_6rem))] grid-rows-[minmax(6rem,_auto)_repeat(5,_min(0,_minmax(3rem,_6rem)))] content-center justify-center gap-2 py-11 px-5 text-center font-mono">
+      <div className="container grid grid-cols-[repeat(4,_minmax(3rem,_5rem))] grid-rows-[minmax(7rem,_auto)_repeat(5,_minmax(3rem,_5rem))] content-center justify-center gap-2 py-11 px-5 text-center font-mono">
         <div className="col-span-4 flex flex-col items-end rounded bg-gray-800 px-2 py-4 text-right">
           <div className="break-all text-white" id="previous-operand">
             123
