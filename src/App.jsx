@@ -60,7 +60,7 @@ const reducer = (state, action) => {
           ...state,
           previousOperand: evaluate(state),
           currentOperand: null,
-          operation: state.operation,
+          operation: action.payload,
         };
       }
     case "clear":
