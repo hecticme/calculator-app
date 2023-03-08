@@ -2,13 +2,21 @@ import { SunIcon } from "@heroicons/react/24/solid";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { ComputerDesktopIcon } from "@heroicons/react/24/solid";
 import { useTheme } from "../contexts/ThemeContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ThemeSwitcher({ expandTheme, setExpandTheme }) {
   const { theme, setTheme, getTheme } = useTheme();
   const [storageTheme, setStorageTheme] = useState(
     localStorage.getItem("theme") ? true : false
   );
+
+  useEffect(() => {
+    if (theme == "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
 
   return (
     <div

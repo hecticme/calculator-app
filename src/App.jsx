@@ -129,9 +129,7 @@ function App() {
 
   return (
     <div
-      className={`flex h-screen flex-col items-center justify-center font-mono ${
-        theme === "dark" ? "dark" : ""
-      }`}
+      className="flex h-screen flex-col items-center justify-center font-mono"
       onClick={() => {
         setExpandTheme(false);
       }}
@@ -141,7 +139,7 @@ function App() {
         setExpandTheme={setExpandTheme}
       />
       <div className="grid grid-cols-[repeat(4,_minmax(3rem,_5rem))] grid-rows-[minmax(7rem,_auto)_repeat(5,_minmax(3rem,_5rem))] content-center justify-center gap-2 py-11 px-5 text-center">
-        <div className="col-span-4 flex flex-col items-end rounded bg-gray-800 p-4 text-right">
+        <div className="col-span-4 flex flex-col items-end rounded bg-gray-800 p-4 text-right dark:bg-zinc-700">
           <div className="break-all text-white" id="previous-operand">
             {formatOperand(state.previousOperand)} {state.operation}
           </div>
@@ -153,7 +151,7 @@ function App() {
           </div>
         </div>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "choose-operation", payload: "÷" });
           }}
@@ -161,7 +159,7 @@ function App() {
           ÷
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "choose-operation", payload: "×" });
           }}
@@ -169,7 +167,7 @@ function App() {
           ×
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "choose-operation", payload: "+" });
           }}
@@ -177,7 +175,7 @@ function App() {
           +
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "choose-operation", payload: "-" });
           }}
@@ -185,7 +183,7 @@ function App() {
           -
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "7" });
           }}
@@ -193,7 +191,7 @@ function App() {
           7
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "8" });
           }}
@@ -201,7 +199,7 @@ function App() {
           8
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "9" });
           }}
@@ -209,7 +207,7 @@ function App() {
           9
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-orange-300 px-4 py-4 transition-colors hover:bg-orange-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-orange-300 px-4 py-4 transition-colors hover:bg-orange-200 "
           onClick={() => {
             dispatch({ type: "del-digit" });
           }}
@@ -217,7 +215,7 @@ function App() {
           Del
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "4" });
           }}
@@ -225,7 +223,7 @@ function App() {
           4
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "5" });
           }}
@@ -233,7 +231,7 @@ function App() {
           5
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "6" });
           }}
@@ -249,7 +247,7 @@ function App() {
           AC
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "1" });
           }}
@@ -257,7 +255,7 @@ function App() {
           1
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "2" });
           }}
@@ -265,7 +263,7 @@ function App() {
           2
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 transition-colors hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "3" });
           }}
@@ -273,7 +271,7 @@ function App() {
           3
         </button>
         <button
-          className="row-span-2 flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 hover:bg-slate-200"
+          className="row-span-2 flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "evaluate" });
           }}
@@ -281,7 +279,7 @@ function App() {
           =
         </button>
         <button
-          className="col-span-2 flex cursor-pointer items-end justify-start rounded bg-slate-300 px-4 py-4 hover:bg-slate-200"
+          className="col-span-2 flex cursor-pointer items-end justify-start rounded bg-slate-300 px-4 py-4 hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "0" });
           }}
@@ -289,7 +287,7 @@ function App() {
           0
         </button>
         <button
-          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 hover:bg-slate-200"
+          className="flex cursor-pointer items-center justify-center rounded bg-slate-300 px-4 py-4 hover:bg-slate-200 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-400"
           onClick={() => {
             dispatch({ type: "add-digit", payload: "." });
           }}
